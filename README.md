@@ -35,7 +35,7 @@ func main() {
 	objA := &AImpl{}                           // init object A
 
 	container.Plug("app", app)               // register app as name "app"
-	container.Plug("aa", objA)               // register objA as name "a"
+	container.Plug("a", objA)               // register objA as name "a"
 	if err := container.Wire(); err != nil { // err is nil
 		log.Fatalf("write failed: %s", err)
 	}
